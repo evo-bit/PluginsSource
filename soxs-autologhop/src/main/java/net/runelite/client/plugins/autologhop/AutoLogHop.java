@@ -84,7 +84,7 @@ public class AutoLogHop extends Plugin
 	@Subscribe
 	public void onGameTick(GameTick event){
 		if (config.disableWildyChecks() || inWilderness()) {
-			if (nearPlayer()) {
+			if (!nearPlayer()) {
 				if (config.hop())
 					hopToWorld(getValidWorld());
 				else {
